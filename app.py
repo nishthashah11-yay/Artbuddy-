@@ -7,7 +7,9 @@ import streamlit as st
 import pandas as pd
 from datetime import datetime
 import time
-from google import genai
+import google.generativeai as genai
+
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 # ---------------- CONFIG ----------------
 st.set_page_config(
@@ -17,9 +19,7 @@ st.set_page_config(
 )
 
 # ---------------- GEMINI CLIENT ----------------
-client = genai.Client(
-    api_key=st.secrets["GEMINI_API_KEY"]
-)
+
 
 # ---------------- SESSION STATE ----------------
 if "splash_done" not in st.session_state:
