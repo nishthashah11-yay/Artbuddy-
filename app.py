@@ -70,7 +70,15 @@ if st.session_state.page == "landing":
         Analyze artwork descriptions and generate intelligent restoration suggestions.
         </p>
     </div>
-    """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True) 
+    # 🎨 Starry Night Image
+starry_night_url = "https://upload.wikimedia.org/wikipedia/commons/e/ee/The_Starry_Night.jpg"
+
+st.image(
+    starry_night_url,
+    caption="The Starry Night (1889) - Vincent van Gogh",
+    use_container_width=True
+)
 
     col1, col2, col3 = st.columns([1,2,1])
     with col2:
