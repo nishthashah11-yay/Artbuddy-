@@ -19,12 +19,29 @@ st.set_page_config(
 )
 
 # ---------------- BACKGROUND IMAGE ----------------
+# ---------------- BACKGROUND IMAGE ----------------
 st.markdown("""
 <style>
 .stApp {
-   background: url("https://upload.wikimedia.org/wikipedia/commons/e/ee/The_Starry_Night.jpg") no-repeat center center fixed;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/ee/The_Starry_Night.jpg");
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
+
+/* Dark overlay for readability */
+.stApp::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: -1;
+}
+</style>
+""", unsafe_allow_html=True)
 
 /* Optional: Dark overlay for better text visibility */
 .stApp::before {
