@@ -64,13 +64,6 @@ if not st.session_state.splash_done:
 if st.session_state.page == "landing":
 
     st.markdown("""
-    <div style="text-align:center;padding-top:120px;">
-        <h1 style="font-size:52px;color:#4a148c;">AI-Powered Art Restoration Assistant</h1>
-        <p style="font-size:20px;color:#6a1b9a;">
-        Analyze artwork descriptions and generate intelligent restoration suggestions.
-        </p>
-    </div>
-    """, unsafe_allow_html=True) 
     # 🎨 Starry Night Image
 starry_night_url = "https://upload.wikimedia.org/wikipedia/commons/e/ee/The_Starry_Night.jpg"
 
@@ -79,6 +72,14 @@ st.image(
     caption="The Starry Night (1889) - Vincent van Gogh",
     use_container_width=True
 )
+    <div style="text-align:center;padding-top:120px;">
+        <h1 style="font-size:52px;color:#4a148c;">AI-Powered Art Restoration Assistant</h1>
+        <p style="font-size:20px;color:#6a1b9a;">
+        Analyze artwork descriptions and generate intelligent restoration suggestions.
+        </p>
+    </div>
+    """, unsafe_allow_html=True) 
+    
 
     col1, col2, col3 = st.columns([1,2,1])
     with col2:
