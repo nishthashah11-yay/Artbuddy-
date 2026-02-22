@@ -1,3 +1,4 @@
+
 # =========================================================
 # 🎨 ArtRestorer AI - Smart Assistance for Art Restoration
 # Scenario 1 - Generative AI Summative Assessment
@@ -17,50 +18,6 @@ st.set_page_config(
     page_icon="🖌️",
     layout="wide"
 )
-
-# ---------------- BACKGROUND IMAGE ----------------
-# ---------------- BACKGROUND IMAGE ----------------
-st.markdown("""
-<style>
-.stApp {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/ee/The_Starry_Night.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-/* Dark overlay for readability */
-.stApp::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.65);
-    z-index: -1;
-}
-</style>
-""", unsafe_allow_html=True)
-
-/* Optional: Dark overlay for better text visibility */
-.stApp::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(25, 0, 40, 0.55);
-    z-index: -1;
-}
-
-/* Make text white for contrast */
-h1, h2, h3, h4, h5, h6, p, label, span {
-    color: white !important;
-}
-</style>
-""", unsafe_allow_html=True)
 
 # ---------------- GEMINI CLIENT ----------------
 
@@ -307,3 +264,6 @@ Maintain cultural sensitivity and artistic accuracy.
 
 # ---------------- FOOTER ----------------
 st.markdown("<hr><p style='text-align:center;'>CRS Generative AI | 2026</p>", unsafe_allow_html=True)
+
+
+
