@@ -18,6 +18,33 @@ st.set_page_config(
     layout="wide"
 )
 
+# ---------------- BACKGROUND IMAGE ----------------
+st.markdown("""
+<style>
+.stApp {
+    background: url("https://images.unsplash.com/photo-1549887534-1541e9326642") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Optional: Dark overlay for better text visibility */
+.stApp::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(25, 0, 40, 0.55);
+    z-index: -1;
+}
+
+/* Make text white for contrast */
+h1, h2, h3, h4, h5, h6, p, label, span {
+    color: white !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 # ---------------- GEMINI CLIENT ----------------
 
 
