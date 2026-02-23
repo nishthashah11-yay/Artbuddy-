@@ -290,7 +290,7 @@ Maintain cultural sensitivity and artistic accuracy.
     # =====================================================
     with tab_prompts:
 
-         st.markdown("""
+        st.markdown("""
         <div class="prompt-box">
         <h2>Compulsory 10 AI Restoration Prompts</h2>
     
