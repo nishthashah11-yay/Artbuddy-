@@ -37,6 +37,35 @@ st.markdown("""
 
 
 
+# ---------------- GLOBAL YELLOW CONTENT BOX ----------------
+st.markdown("""
+<style>
+
+/* Remove default background */
+.block-container {
+    background: transparent;
+}
+
+/* Main content area inside tabs */
+section.main > div {
+    background-color: #FFD54F;  /* Soft yellow */
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Make text readable */
+h1, h2, h3, h4, h5, h6, p, label {
+    color: #2c2c2c !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+
+
+
 
 # ---------------- YELLOW BOX STYLE ----------------
 st.markdown("""
@@ -64,6 +93,9 @@ st.markdown("""
 
 </style>
 """, unsafe_allow_html=True)
+
+
+
 
 
 
