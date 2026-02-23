@@ -218,8 +218,9 @@ if not st.session_state.splash_done:
     
     /* Floating animation */
     @keyframes float {
-        from { transform: translateY(0px) scale(1); }
-        to { transform: translateY(-40px) scale(1.1); }
+    0%   { transform: translateY(0px) scale(1); }
+    50%  { transform: translateY(-60px) scale(1.15); }
+    100% { transform: translateY(0px) scale(1); }
     }
     
     </style>
@@ -239,8 +240,8 @@ if not st.session_state.splash_done:
     </html>
     """
 
-    st.components.v1.html(splash_html, height=600)
-    time.sleep(4)
+    st.components.v1.html(splash_html, height=700)
+    time.sleep(6)
     st.session_state.splash_done = True
     st.rerun()
 
