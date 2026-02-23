@@ -118,6 +118,38 @@ st.markdown("""
 
 
 
+# ---------------- YELLOW TABS STYLE ----------------
+st.markdown("""
+<style>
+
+/* Target tab list */
+div[data-baseweb="tab-list"] {
+    background-color: transparent;
+}
+
+/* Individual tab buttons */
+button[data-baseweb="tab"] {
+    background-color: #FBE9A7 !important;   /* Yellow */
+    color: black !important;
+    border-radius: 12px 12px 0px 0px;
+    margin-right: 5px;
+    font-weight: 600;
+    padding: 8px 16px;
+}
+
+/* Active tab */
+button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: #F4C430 !important;  /* Slightly darker yellow */
+    color: black !important;
+    border-bottom: 3px solid black;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+
+
+
 
 
 
