@@ -38,27 +38,28 @@ st.markdown("""
 
 
 
+# ---------------- YELLOW BOX STYLE ----------------
 st.markdown("""
 <style>
 
-/* Dark Box Style */
-.dark-box {
-    background-color: #1e1e1e;
+/* Yellow Box */
+.yellow-box {
+    background-color: #FFD54F;  /* Soft museum yellow */
     padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0px 6px 25px rgba(0,0,0,0.6);
+    border-radius: 18px;
+    margin-bottom: 25px;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.3);
 }
 
-/* Make text white inside dark boxes */
-.dark-box h1,
-.dark-box h2,
-.dark-box h3,
-.dark-box h4,
-.dark-box h5,
-.dark-box h6,
-.dark-box p {
-    color: white;
+/* Text inside yellow box */
+.yellow-box h1,
+.yellow-box h2,
+.yellow-box h3,
+.yellow-box h4,
+.yellow-box h5,
+.yellow-box h6,
+.yellow-box p {
+    color: #2c2c2c;
 }
 
 </style>
