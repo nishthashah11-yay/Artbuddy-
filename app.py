@@ -359,18 +359,25 @@ with tab_feedback:
         st.dataframe(pd.DataFrame([usage_data]))
 
     # =====================================================
+    # =====================================================
     # TAB 5 - SETTINGS
     # =====================================================
     with tab_settings:
-
-        st.write("### Profile Information")
+    
+        st.markdown("""
+        <div class="prompt-box">
+        <h2>Profile Information</h2>
+        """, unsafe_allow_html=True)
+    
         st.write(f"Name: {st.session_state.name}")
         st.write(f"Institution: {st.session_state.institution}")
         st.write(f"Country: {st.session_state.country}")
-
+    
         if st.button("Sign Out"):
             st.session_state.page = "landing"
             st.rerun()
+    
+        st.markdown("</div>", unsafe_allow_html=True)
 
 # ---------------- FOOTER ----------------
 st.markdown("<hr><p style='text-align:center;'>CRS Generative AI | 2026</p>", unsafe_allow_html=True)
