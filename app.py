@@ -26,11 +26,16 @@ st.markdown("""
 <style>
 
 .prompt-box {
-    background-color: #FBE9A7;   /* Soft museum yellow */
+    background-color: #FBE9A7;  /* keep your yellow */
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0px 8px 25px rgba(0,0,0,0.25);
     margin-top: 20px;
+}
+
+/* FORCE ALL TEXT INSIDE TO BE BLACK */
+.prompt-box * {
+    color: black !important;
 }
 
 </style>
