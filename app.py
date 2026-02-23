@@ -309,21 +309,7 @@ Maintain cultural sensitivity and artistic accuracy.
     
         </div>
         """, unsafe_allow_html=True)
-        st.subheader("Compulsory 10 AI Restoration Prompts")
-
-        prompts = [
-            "Baroque painting missing upper-left corner — restore dramatic shadows.",
-            "Mughal miniature with faded floral borders — enhance detailing.",
-            "12th century sandstone sculpture with eroded face — reconstruct symmetrically.",
-            "18th century silk tapestry torn near emblem — restore embroidery consistency.",
-            "Abstract Expressionist canvas lost texture — recreate chaotic brushstroke feel.",
-            "Ajanta cave mural with sun fading — digitally revive mineral pigments.",
-            "Mayan glyph carvings partially eroded — reconstruct symbolic inscriptions.",
-            "Japanese Ukiyo-e woodblock faded — enhance wave and ink precision.",
-            "Gothic cathedral mosaic cracked — restore stained glass symmetry.",
-            "Medieval manuscript ink erosion — recreate script and floral margins."
-        ]
-
+        
         for i, p in enumerate(prompts, 1):
             st.markdown(f"**{i}.** {p}")
 
