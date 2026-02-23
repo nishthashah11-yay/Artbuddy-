@@ -153,14 +153,15 @@ elif st.session_state.page == "profile":
 elif st.session_state.page == "dashboard":
 
     # HEADER
-   st.markdown(f"""
-    <div class="yellow-box" style="text-align:center;">
+    st.markdown(f"""
+    <div style="background:linear-gradient(135deg,#4a148c,#6a1b9a);
+                padding:20px;border-radius:15px;color:white;">
         <h1>🎨 ArtRestorer AI</h1>
         <p>Welcome {st.session_state.name} | {st.session_state.institution}</p>
     </div>
     """, unsafe_allow_html=True)
 
-tab_restore, tab_prompts, tab_feedback, tab_usage, tab_settings = st.tabs(
+    tab_restore, tab_prompts, tab_feedback, tab_usage, tab_settings = st.tabs(
         ["🖌️ Restoration Assistant", 
          "📜 Prompt Library (10+)", 
          "📊 Feedback",
