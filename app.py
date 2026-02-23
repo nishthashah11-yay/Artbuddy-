@@ -178,14 +178,63 @@ if not st.session_state.splash_done:
         background: linear-gradient(180deg,#f3e5f5,#e1bee7,#ce93d8);
         font-family:Segoe UI;
         text-align:center;
+        overflow:hidden;
     }
-    .title {margin-top:200px;font-size:60px;font-weight:bold;color:#4a148c;}
-    .subtitle {font-size:22px;color:#6a1b9a;margin-top:10px;}
+    
+    /* Title Styling */
+    .title {
+        margin-top:180px;
+        font-size:60px;
+        font-weight:bold;
+        color:#4a148c;
+        position:relative;
+        z-index:2;
+    }
+    
+    .subtitle {
+        font-size:22px;
+        color:#6a1b9a;
+        margin-top:10px;
+        position:relative;
+        z-index:2;
+    }
+    
+    /* Paint Splashes */
+    .splash {
+        position:absolute;
+        width:120px;
+        height:120px;
+        border-radius:50%;
+        opacity:0.7;
+        animation: float 6s infinite ease-in-out alternate;
+    }
+    
+    /* Different colors */
+    .s1 { background:#ff5252; top:10%; left:15%; animation-delay:0s; }
+    .s2 { background:#ffca28; top:60%; left:70%; animation-delay:1s; }
+    .s3 { background:#29b6f6; top:40%; left:30%; animation-delay:2s; }
+    .s4 { background:#66bb6a; top:75%; left:20%; animation-delay:3s; }
+    .s5 { background:#ab47bc; top:20%; left:80%; animation-delay:4s; }
+    
+    /* Floating animation */
+    @keyframes float {
+        from { transform: translateY(0px) scale(1); }
+        to { transform: translateY(-40px) scale(1.1); }
+    }
+    
     </style>
     </head>
     <body>
-        <div class="title">🎨 ArtRestorer AI</div>
-        <div class="subtitle">Reviving Heritage with Digital Intelligence</div>
+    
+    <div class="splash s1"></div>
+    <div class="splash s2"></div>
+    <div class="splash s3"></div>
+    <div class="splash s4"></div>
+    <div class="splash s5"></div>
+    
+    <div class="title">🎨 ArtRestorer AI</div>
+    <div class="subtitle">Reviving Heritage with Digital Intelligence</div>
+    
     </body>
     </html>
     """
