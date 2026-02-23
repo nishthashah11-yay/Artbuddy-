@@ -305,79 +305,79 @@ elif st.session_state.page == "dashboard":
     # =====================================================
 # TAB 1 - RESTORATION ASSISTANT
 # =====================================================
-with tab_restore:
-
-    st.markdown("""
-    <div class="prompt-box">
-    <h2>Describe the Artwork</h2>
-    """, unsafe_allow_html=True)
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        artwork_type = st.selectbox(
-            "Artwork Type",
-            ["Oil Painting","Sculpture","Textile","Mural",
-             "Manuscript","Mosaic","Pottery"]
-        )
-
-        art_period = st.text_input(
-            "Art Period / Style (e.g., Renaissance, Mughal, Gothic)"
-        )
-
-        artist = st.text_input("Artist (if known)")
-
-    with col2:
-        damage = st.text_area("Damage Description")
-
-        output_format = st.selectbox(
-            "Desired Output",
-            ["Restoration Technique",
-             "Narrative Reconstruction",
-             "Symbol Interpretation",
-             "Complete Analysis"]
-        )
-
-        temperature = st.slider(
-            "Creativity Level (Temperature)",
-            0.1, 1.0, 0.6
-        )
-
-    if st.button("Generate AI Restoration Suggestion"):
-
-        prompt = f"""
-You are a senior art restoration expert.
-
-Artwork Type: {artwork_type}
-Period/Style: {art_period}
-Artist: {artist}
-Damage Description: {damage}
-Output Type: {output_format}
-
-Provide:
-1. Restoration Strategy
-2. Implementation Steps
-3. Cultural and Historical Justification
-4. Risk Mitigation Advice
-5. Final Professional Recommendation
-
-Maintain cultural sensitivity and artistic accuracy.
-"""
-
-        with st.spinner("Analyzing artwork and generating restoration strategy..."):
-            response = client.models.generate_content(
-                model="gemini-3-flash-preview",
-                contents=prompt,
-                config={
-                    "temperature": temperature,
-                    "max_output_tokens": 2048
-                }
+    with tab_restore:
+    
+        st.markdown("""
+        <div class="prompt-box">
+        <h2>Describe the Artwork</h2>
+        """, unsafe_allow_html=True)
+    
+        col1, col2 = st.columns(2)
+    
+        with col1:
+            artwork_type = st.selectbox(
+                "Artwork Type",
+                ["Oil Painting","Sculpture","Textile","Mural",
+                 "Manuscript","Mosaic","Pottery"]
             )
-
-        st.markdown("### 🎨 AI Restoration Output")
-        st.markdown(response.text)
-
-    st.markdown("</div>", unsafe_allow_html=True)
+    
+            art_period = st.text_input(
+                "Art Period / Style (e.g., Renaissance, Mughal, Gothic)"
+            )
+    
+            artist = st.text_input("Artist (if known)")
+    
+        with col2:
+            damage = st.text_area("Damage Description")
+    
+            output_format = st.selectbox(
+                "Desired Output",
+                ["Restoration Technique",
+                 "Narrative Reconstruction",
+                 "Symbol Interpretation",
+                 "Complete Analysis"]
+            )
+    
+            temperature = st.slider(
+                "Creativity Level (Temperature)",
+                0.1, 1.0, 0.6
+            )
+    
+        if st.button("Generate AI Restoration Suggestion"):
+    
+            prompt = f"""
+    You are a senior art restoration expert.
+    
+    Artwork Type: {artwork_type}
+    Period/Style: {art_period}
+    Artist: {artist}
+    Damage Description: {damage}
+    Output Type: {output_format}
+    
+    Provide:
+    1. Restoration Strategy
+    2. Implementation Steps
+    3. Cultural and Historical Justification
+    4. Risk Mitigation Advice
+    5. Final Professional Recommendation
+    
+    Maintain cultural sensitivity and artistic accuracy.
+    """
+    
+            with st.spinner("Analyzing artwork and generating restoration strategy..."):
+                response = client.models.generate_content(
+                    model="gemini-3-flash-preview",
+                    contents=prompt,
+                    config={
+                        "temperature": temperature,
+                        "max_output_tokens": 2048
+                    }
+                )
+    
+            st.markdown("### 🎨 AI Restoration Output")
+            st.markdown(response.text)
+    
+        st.markdown("</div>", unsafe_allow_html=True)
 
     # =====================================================
     # TAB 2 - 10+ PROMPT LIBRARY
