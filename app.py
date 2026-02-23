@@ -37,28 +37,26 @@ st.markdown("""
 
 
 
-# ---------------- GLOBAL YELLOW CONTENT BOX ----------------
+# ---------------- GLOBAL YELLOW CONTENT CARD ----------------
 st.markdown("""
 <style>
 
-/* Remove default background */
+/* Keep background visible */
 .block-container {
     background: transparent;
+    padding-top: 2rem;
 }
 
-/* Main content area inside tabs */
-section.main > div {
-    background-color: #FFD54F;  /* Soft yellow */
-    padding: 30px;
+/* Yellow card behind all content */
+section.main > div.block-container {
+    background-color: #FBE9A7;   /* Soft yellow */
+    padding: 35px;
     border-radius: 20px;
-    margin-top: 20px;
-    box-shadow: 0px 8px 25px rgba(0,0,0,0.3);
+    box-shadow: 0px 8px 30px rgba(0,0,0,0.25);
 }
 
-/* Make text readable */
-h1, h2, h3, h4, h5, h6, p, label {
-    color: #2c2c2c !important;
-}
+/* DO NOT change text colors */
+/* We keep default dark text */
 
 </style>
 """, unsafe_allow_html=True)
