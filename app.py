@@ -1,4 +1,5 @@
 
+
 # =========================================================
 # 🎨 ArtRestorer AI - Smart Assistance for Art Restoration
 # Scenario 1 - Generative AI Summative Assessment
@@ -32,6 +33,40 @@ st.markdown("""
 
 </style>
 """, unsafe_allow_html=True)
+
+
+
+
+
+st.markdown("""
+<style>
+
+/* Dark Box Style */
+.dark-box {
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 6px 25px rgba(0,0,0,0.6);
+}
+
+/* Make text white inside dark boxes */
+.dark-box h1,
+.dark-box h2,
+.dark-box h3,
+.dark-box h4,
+.dark-box h5,
+.dark-box h6,
+.dark-box p {
+    color: white;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+
+
+
 
 # ---------------- GEMINI CLIENT ----------------
 
