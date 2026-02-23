@@ -160,7 +160,6 @@ elif st.session_state.page == "dashboard":
         <p>Welcome {st.session_state.name} | {st.session_state.institution}</p>
     </div>
     """, unsafe_allow_html=True)
-
     tab_restore, tab_prompts, tab_feedback, tab_usage, tab_settings = st.tabs(
         ["🖌️ Restoration Assistant", 
          "📜 Prompt Library (10+)", 
