@@ -326,7 +326,6 @@ Maintain cultural sensitivity and artistic accuracy.
         <div class="prompt-box">
         <h2>AI Output Evaluation</h2>
         """, unsafe_allow_html=True)
-    
         with st.form("feedback_form"):
             f1 = st.checkbox("Culturally accurate")
             f2 = st.checkbox("Technically useful")
@@ -335,7 +334,6 @@ Maintain cultural sensitivity and artistic accuracy.
             f5 = st.checkbox("Clear and understandable")
     
             submitted = st.form_submit_button("Submit Feedback")
-    
         if submitted:
             score = sum([f1, f2, f3, f4, f5])
             percentage = int((score / 5) * 100)
