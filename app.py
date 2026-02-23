@@ -118,30 +118,29 @@ st.markdown("""
 
 
 
-# ---------------- YELLOW TABS STYLE ----------------
+# ---------------- YELLOW TABS STYLE (FIXED) ----------------
 st.markdown("""
 <style>
 
-/* Target tab list */
-div[data-baseweb="tab-list"] {
-    background-color: transparent;
+/* Target the tab buttons container */
+div[data-testid="stTabs"] button {
+    background-color: #FBE9A7 !important;
+    color: black !important;
+    border-radius: 12px 12px 0px 0px !important;
+    margin-right: 6px !important;
+    font-weight: 600 !important;
 }
 
-/* Individual tab buttons */
-button[data-baseweb="tab"] {
-    background-color: #FBE9A7 !important;   /* Yellow */
+/* Active tab styling */
+div[data-testid="stTabs"] button[aria-selected="true"] {
+    background-color: #F4C430 !important;
     color: black !important;
-    border-radius: 12px 12px 0px 0px;
-    margin-right: 5px;
-    font-weight: 600;
-    padding: 8px 16px;
+    border-bottom: 3px solid black !important;
 }
 
-/* Active tab */
-button[data-baseweb="tab"][aria-selected="true"] {
-    background-color: #F4C430 !important;  /* Slightly darker yellow */
-    color: black !important;
-    border-bottom: 3px solid black;
+/* Remove grey default highlight */
+div[data-testid="stTabs"] button:focus {
+    box-shadow: none !important;
 }
 
 </style>
