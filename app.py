@@ -318,29 +318,32 @@ Maintain cultural sensitivity and artistic accuracy.
         
 
     # =====================================================
-    # TAB 3 - FEEDBACK
     # =====================================================
-    with tab_feedback:
+# TAB 3 - FEEDBACK
+# =====================================================
+with tab_feedback:
 
-         st.markdown("""
-        <div class="prompt-box">
-        <h2>AI Output Evaluation</h2>
-        """, unsafe_allow_html=True)
-        with st.form("feedback_form"):
-            f1 = st.checkbox("Culturally accurate")
-            f2 = st.checkbox("Technically useful")
-            f3 = st.checkbox("Historically aligned")
-            f4 = st.checkbox("Creative but realistic")
-            f5 = st.checkbox("Clear and understandable")
-    
-            submitted = st.form_submit_button("Submit Feedback")
-        if submitted:
-            score = sum([f1, f2, f3, f4, f5])
-            percentage = int((score / 5) * 100)
-            st.progress(percentage / 100)
-            st.success(f"Quality Score: {percentage}%")
-    
-        st.markdown("</div>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class="prompt-box">
+    <h2>AI Output Evaluation</h2>
+    """, unsafe_allow_html=True)
+
+    with st.form("feedback_form"):
+        f1 = st.checkbox("Culturally accurate")
+        f2 = st.checkbox("Technically useful")
+        f3 = st.checkbox("Historically aligned")
+        f4 = st.checkbox("Creative but realistic")
+        f5 = st.checkbox("Clear and understandable")
+
+        submitted = st.form_submit_button("Submit Feedback")
+
+    if submitted:
+        score = sum([f1, f2, f3, f4, f5])
+        percentage = int((score / 5) * 100)
+        st.progress(percentage / 100)
+        st.success(f"Quality Score: {percentage}%")
+
+    st.markdown("</div>", unsafe_allow_html=True)
     # =====================================================
     # TAB 4 - USAGE
     # =====================================================
