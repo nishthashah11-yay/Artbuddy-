@@ -410,66 +410,66 @@ elif st.session_state.page == "dashboard":
     # =====================================================
 # TAB 3 - FEEDBACK
 # =====================================================
-with tab_feedback:
-
-    st.markdown("""
-    <div class="prompt-box">
-    <h2>AI Output Evaluation</h2>
-    """, unsafe_allow_html=True)
-
-    with st.form("feedback_form"):
-        f1 = st.checkbox("Culturally accurate")
-        f2 = st.checkbox("Technically useful")
-        f3 = st.checkbox("Historically aligned")
-        f4 = st.checkbox("Creative but realistic")
-        f5 = st.checkbox("Clear and understandable")
-
-        submitted = st.form_submit_button("Submit Feedback")
-
-    if submitted:
-        score = sum([f1, f2, f3, f4, f5])
-        percentage = int((score / 5) * 100)
-        st.progress(percentage / 100)
-        st.success(f"Quality Score: {percentage}%")
-
-    st.markdown("</div>", unsafe_allow_html=True)
-    # =====================================================
-    # TAB 4 - USAGE
-    # =====================================================
-    with tab_usage:
-
-        usage_data = {
-            "Name": st.session_state.name,
-            "Institution": st.session_state.institution,
-            "Country": st.session_state.country,
-            "Time": datetime.now().strftime("%Y-%m-%d %H:%M")
-        }
-
-        st.dataframe(pd.DataFrame([usage_data]))
-
-    # =====================================================
-    # =====================================================
-    # TAB 5 - SETTINGS
-    # =====================================================
-    with tab_settings:
+    with tab_feedback:
     
         st.markdown("""
         <div class="prompt-box">
-        <h2>Profile Information</h2>
+        <h2>AI Output Evaluation</h2>
         """, unsafe_allow_html=True)
     
-        st.write(f"Name: {st.session_state.name}")
-        st.write(f"Institution: {st.session_state.institution}")
-        st.write(f"Country: {st.session_state.country}")
+        with st.form("feedback_form"):
+            f1 = st.checkbox("Culturally accurate")
+            f2 = st.checkbox("Technically useful")
+            f3 = st.checkbox("Historically aligned")
+            f4 = st.checkbox("Creative but realistic")
+            f5 = st.checkbox("Clear and understandable")
     
-        if st.button("Sign Out"):
-            st.session_state.page = "landing"
-            st.rerun()
+            submitted = st.form_submit_button("Submit Feedback")
+    
+        if submitted:
+            score = sum([f1, f2, f3, f4, f5])
+            percentage = int((score / 5) * 100)
+            st.progress(percentage / 100)
+            st.success(f"Quality Score: {percentage}%")
     
         st.markdown("</div>", unsafe_allow_html=True)
-
-# ---------------- FOOTER ----------------
-st.markdown("<hr><p style='text-align:center;'>CRS Generative AI | 2026</p>", unsafe_allow_html=True)
+        # =====================================================
+        # TAB 4 - USAGE
+        # =====================================================
+        with tab_usage:
+    
+            usage_data = {
+                "Name": st.session_state.name,
+                "Institution": st.session_state.institution,
+                "Country": st.session_state.country,
+                "Time": datetime.now().strftime("%Y-%m-%d %H:%M")
+            }
+    
+            st.dataframe(pd.DataFrame([usage_data]))
+    
+        # =====================================================
+        # =====================================================
+        # TAB 5 - SETTINGS
+        # =====================================================
+        with tab_settings:
+        
+            st.markdown("""
+            <div class="prompt-box">
+            <h2>Profile Information</h2>
+            """, unsafe_allow_html=True)
+        
+            st.write(f"Name: {st.session_state.name}")
+            st.write(f"Institution: {st.session_state.institution}")
+            st.write(f"Country: {st.session_state.country}")
+        
+            if st.button("Sign Out"):
+                st.session_state.page = "landing"
+                st.rerun()
+        
+            st.markdown("</div>", unsafe_allow_html=True)
+    
+    # ---------------- FOOTER ----------------
+    st.markdown("<hr><p style='text-align:center;'>CRS Generative AI | 2026</p>", unsafe_allow_html=True)
 
 
 
