@@ -20,6 +20,24 @@ st.set_page_config(
     layout="wide"
 )
 
+
+# ---------------- YELLOW PROMPT BOX STYLE ----------------
+st.markdown("""
+<style>
+
+.prompt-box {
+    background-color: #FBE9A7;   /* Soft museum yellow */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.25);
+    margin-top: 20px;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+
+
 st.markdown("""
 <style>
 
@@ -271,6 +289,26 @@ Maintain cultural sensitivity and artistic accuracy.
     # TAB 2 - 10+ PROMPT LIBRARY
     # =====================================================
     with tab_prompts:
+
+         st.markdown("""
+        <div class="prompt-box">
+        <h2>Compulsory 10 AI Restoration Prompts</h2>
+    
+        <ol>
+            <li>Baroque painting missing upper-left corner — restore dramatic shadows.</li>
+            <li>Mughal miniature with faded floral borders — enhance detailing.</li>
+            <li>12th century sandstone sculpture with eroded face — reconstruct symmetrically.</li>
+            <li>18th century silk tapestry torn near emblem — restore embroidery consistency.</li>
+            <li>Abstract Expressionist canvas lost texture — recreate chaotic brushstroke feel.</li>
+            <li>Ajanta cave mural with sun fading — digitally revive mineral pigments.</li>
+            <li>Mayan glyph carvings partially eroded — reconstruct symbolic inscriptions.</li>
+            <li>Japanese Ukiyo-e woodblock faded — enhance wave and ink precision.</li>
+            <li>Gothic cathedral mosaic cracked — restore stained glass symmetry.</li>
+            <li>Medieval manuscript ink erosion — recreate script and floral margins.</li>
+        </ol>
+    
+        </div>
+        """, unsafe_allow_html=True)
 
         st.subheader("Compulsory 10 AI Restoration Prompts")
 
