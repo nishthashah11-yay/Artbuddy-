@@ -309,7 +309,6 @@ Maintain cultural sensitivity and artistic accuracy.
     
         </div>
         """, unsafe_allow_html=True)
-
         st.subheader("Compulsory 10 AI Restoration Prompts")
 
         prompts = [
