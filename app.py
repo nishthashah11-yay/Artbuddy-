@@ -310,8 +310,7 @@ Maintain cultural sensitivity and artistic accuracy.
         </div>
         """, unsafe_allow_html=True)
         
-        for i, p in enumerate(prompts, 1):
-            st.markdown(f"**{i}.** {p}")
+        
 
     # =====================================================
     # TAB 3 - FEEDBACK
