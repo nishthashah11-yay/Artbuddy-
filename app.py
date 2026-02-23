@@ -115,7 +115,7 @@ if not st.session_state.splash_done:
 if st.session_state.page == "landing":
 
     st.markdown("""
-    <div class="dark-box" style="text-align:center;margin-top:120px;">
+    <div class="yellow-box" style="text-align:center;margin-top:120px;">
         <h1 style="font-size:52px;">AI-Powered Art Restoration Assistant</h1>
         <p style="font-size:20px;">
         Analyze artwork descriptions and generate intelligent restoration suggestions.
