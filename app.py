@@ -153,9 +153,8 @@ elif st.session_state.page == "profile":
 elif st.session_state.page == "dashboard":
 
     # HEADER
-    st.markdown(f"""
-    <div style="background:linear-gradient(135deg,#4a148c,#6a1b9a);
-                padding:20px;border-radius:15px;color:white;">
+   st.markdown(f"""
+    <div class="yellow-box" style="text-align:center;">
         <h1>🎨 ArtRestorer AI</h1>
         <p>Welcome {st.session_state.name} | {st.session_state.institution}</p>
     </div>
