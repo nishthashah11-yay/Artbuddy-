@@ -365,7 +365,7 @@ elif st.session_state.page == "dashboard":
     """
     
             # define once
-            model = genai.GenerativeModel("gemini-1.5-flash")
+            model = genai.GenerativeModel("gemini-3-flash-preview")
             
             with st.spinner("Analyzing artwork and generating restoration strategy..."):
                 response = model.generate_content(
