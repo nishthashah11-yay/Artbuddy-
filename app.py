@@ -342,6 +342,18 @@ elif st.session_state.page == "dashboard":
                 "Creativity Level (Temperature)",
                 0.1, 1.0, 0.6
             )
+            uploaded_image = st.file_uploader(
+                "Upload Artwork Image (Optional)",
+                type=["jpg", "jpeg", "png"]
+            )
+            if uploaded_image:
+                st.image(uploaded_image, caption="Uploaded Artwork", use_container_width=True)
+
+            
+
+
+
+        
     
         if st.button("Generate AI Restoration Suggestion"):
     
@@ -368,15 +380,31 @@ elif st.session_state.page == "dashboard":
             model = genai.GenerativeModel("gemini-3-flash-preview")
             
             with st.spinner("Analyzing artwork and generating restoration strategy..."):
-                response = model.generate_content(
-                    prompt,
-                    generation_config={
-                        "temperature": temperature,
-                        "max_output_tokens": 2048
-                    }
-                )
-            st.markdown("### 🎨 AI Restoration Output")
-            st.markdown(response.text)
+
+                if uploaded_image:
+                    response = model.generate_content(
+                        [
+                            prompt,
+                            {
+                                "mime_type": uploaded_image.type,
+                                "data": uploaded_image.getvalue()
+                            }
+                        ],
+                        generation_config={
+                            "temperature": temperature,
+                            "max_output_tokens": 2048
+                        }
+                    )
+                else:
+                    response = model.generate_content(
+                        prompt,
+                        generation_config={
+                            "temperature": temperature,
+                            "max_output_tokens": 2048
+                        }
+                    )
+                st.markdown("### 🎨 AI Restoration Output")
+                st.markdown(response.text)
     
             
             
