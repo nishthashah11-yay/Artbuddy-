@@ -376,7 +376,7 @@ elif st.session_state.page == "dashboard":
                     }
                 )
 
-st.markdown(response.text)
+            st.markdown(response.text)
     
             st.markdown("### 🎨 AI Restoration Output")
             st.markdown(response.text)
