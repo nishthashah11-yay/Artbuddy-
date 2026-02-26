@@ -378,8 +378,8 @@ elif st.session_state.page == "dashboard":
 
             st.markdown(response.text)
     
-            st.markdown("### 🎨 AI Restoration Output")
-            st.markdown(response.text)
+            
+            
     
         st.markdown("</div>", unsafe_allow_html=True)
 
