@@ -364,15 +364,19 @@ elif st.session_state.page == "dashboard":
     Maintain cultural sensitivity and artistic accuracy.
     """
     
+            # define once
+            model = genai.GenerativeModel("gemini-1.5-flash")
+            
             with st.spinner("Analyzing artwork and generating restoration strategy..."):
-                response = client.models.generate_content(
-                    model="gemini-3-flash-preview",
-                    contents=prompt,
-                    config={
+                response = model.generate_content(
+                    prompt,
+                    generation_config={
                         "temperature": temperature,
                         "max_output_tokens": 2048
                     }
                 )
+
+st.markdown(response.text)
     
             st.markdown("### 🎨 AI Restoration Output")
             st.markdown(response.text)
