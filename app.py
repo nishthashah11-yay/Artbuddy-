@@ -375,7 +375,7 @@ elif st.session_state.page == "dashboard":
                         "max_output_tokens": 2048
                     }
                 )
-
+            st.markdown("### 🎨 AI Restoration Output")
             st.markdown(response.text)
     
             
