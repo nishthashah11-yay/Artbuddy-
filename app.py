@@ -15,7 +15,7 @@ genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 # ---------------- CONFIG ----------------
 st.set_page_config(
-    page_title="ArtRestorer AI 🎨",
+    page_title="Heritatech Solutions  🎨",
     page_icon="🖌️",
     layout="wide"
 )
