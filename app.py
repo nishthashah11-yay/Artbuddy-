@@ -422,11 +422,16 @@ elif st.session_state.page == "dashboard":
                             "max_output_tokens": 2048
                         }
                     )
-                   st.markdown("""
+                    
+                    st.markdown("""
                     <div class="prompt-box">
                     <h3>🎨 AI Restoration Output</h3>
                     </div>
                     """, unsafe_allow_html=True)
+
+            
+                    
+                   
                 
                # ---------- AI OUTPUT (FIXED) ----------
                 st.markdown("### 🎨 AI Restoration Output")
