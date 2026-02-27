@@ -42,6 +42,25 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
+st.markdown("""
+<style>
+
+/* AI OUTPUT BOX (GUARANTEED WORKING) */
+.ai-output-box {
+    background-color: #FBE9A7;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.25);
+    margin-top: 20px;
+}
+
+.ai-output-box * {
+    color: black !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
 
 st.markdown("""
 <style>
@@ -409,12 +428,18 @@ elif st.session_state.page == "dashboard":
                 </div>
                 """, unsafe_allow_html=True)
                 
-                st.markdown(f"""
-                <div class="prompt-box">
-                {response.text}
-                </div>
-                """, unsafe_allow_html=True)
-                            
+               # ---------- AI OUTPUT (FIXED) ----------
+                st.markdown("### 🎨 AI Restoration Output")
+                
+                with st.container():
+                    st.markdown(
+                        f"""
+                        <div class="ai-output-box">
+                        {response.text}
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )
             
     
         st.markdown("</div>", unsafe_allow_html=True)
