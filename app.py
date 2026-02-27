@@ -252,7 +252,7 @@ if not st.session_state.splash_done:
     <div class="splash s4"></div>
     <div class="splash s5"></div>
     
-    <div class="title">🎨 ArtRestorer AI</div>
+    <div class="title">🎨 Heritatech Solutions</div>
     <div class="subtitle">Reviving Heritage with Digital Intelligence</div>
     
     </body>
