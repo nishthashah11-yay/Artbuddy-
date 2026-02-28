@@ -74,7 +74,7 @@ Develop a **Smart Generative AI Assistant** that:
 ## 🤖 Model Integration
 
 ### Model Used
-```python
+python
 model = genai.GenerativeModel("gemini-3-flash-preview")
 # 🔧 Hyperparameter Tuning
 
